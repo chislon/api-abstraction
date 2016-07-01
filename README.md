@@ -3,6 +3,8 @@ A proof-of-concept hosting provider agnostic abstraction of the API end-points, 
 
 User becomes authenticated by Google login to this application.
 
+To run this in a Docker container, check out https://github.com/chislon/api-abstraction-docker
+
 ## Supported API Endpoints 
 * [LCBO API](https://lcboapi.com)
 
@@ -21,8 +23,11 @@ Create a file named 'default.json', modelled after the template provided of 'def
 * "clientSecret" from Google Developers Console
 * "callback" the full callback URL, such as http://127.0.0.1/callback
 * "cookieSecret" a secret to encrypt session cookies with
+* "key" LCBO API key
 
 This file also dictates the API endpoints which are accessible. 
+
+Run with 'npm start' or 'pm2 start process.json'
 
 After the application is running, navigate to /auth/ to initiate the Google login, you will need to have your Google and LCBO API keys setup. 
 
