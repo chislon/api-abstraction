@@ -8,6 +8,10 @@
   },
   "author": "Chislon Chow <chislon@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chislon/api-abstraction"
+  },
   "dependencies": {
     "compression": "^1.6.2",
     "config": "^1.21.0",
