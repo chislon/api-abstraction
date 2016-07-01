@@ -1,0 +1,20 @@
+{
+  "API": {
+    "name": "LCBO",
+    "host": "https://lcboapi.com/",
+    "key": "key_here",
+    "endpoints": {
+      // map more endpoints as desired
+      "products": null,
+      "stores": null,
+      "inventories": null
+    }
+  },
+  "Auth": {
+    // Google only
+    "clientId": "client_id_here",
+    "clientSecret": "client_secret_here",
+    "callback": "configured_authorized_redirect_uri",
+    "cookieSecret": "cookie_secret_here"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "api-abstraction",
+  "version": "1.0.0",
+  "description": "Abstract APIs, allow user access via Google OAuth",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "author": "Chislon Chow <chislon@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "compression": "^1.6.2",
+    "config": "^1.21.0",
+    "cookie-session": "^2.0.0-alpha.1",
+    "express": "^4.14.0",
+    "helmet": "^2.1.1",
+    "passport": "^0.3.2",
+    "passport-google-oauth": "^1.0.0",
+    "pm2": "^1.1.3",
+    "request": "^2.72.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.5.3"
+  }
+}
