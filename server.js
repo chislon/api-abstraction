@@ -21,8 +21,7 @@ app.use(helmet.noCache());
 const cookieSession = require('cookie-session');
 app.use(cookieSession({
     name: 'session',
-    secret: authConfig.cookieSecret,
-    maxAge: 60 * 60 * 1000
+    secret: authConfig.cookieSecret
 }))
 
 // setup passport with sessions and Google Oauth
