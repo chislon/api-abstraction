@@ -15,7 +15,7 @@ Originally written for Node 4.x
 The configuration file 'default.json' shall contain: 
 * "clientId" from Google Developers Console, typically ends in ".apps.googleusercontent.com"
 * "clientSecret" from Google Developers Console
-* "callback" the full callback URL, such as http://127.0.0.1/callback
+* "callback" the full callback URL, should point to /callback/ for the application, such as http://127.0.0.1/callback if running on localhost port 80
 * "cookieSecret" a secret to encrypt session cookies with
 * "key" LCBO API key
 
@@ -31,7 +31,9 @@ This file also dictates the API endpoints which are accessible to access from LC
 
 1. After the application is running, navigate to /login/ to initiate the Google login, you will need to have your Google and LCBO API keys setup. 
 
-1. Navigate to /logout when done
+1. Navigate to /api/products or other configured endpoints
+
+1. Navigate to /logout when done to logout
 
 ## Caveats
 * uses cookie session, data persistence layer not implemented
