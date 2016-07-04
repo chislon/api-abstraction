@@ -34,12 +34,16 @@ authHelpers.preparePassport(passport, GoogleStrategy, authConfig);
 
 
 // authorization route
-const authRouter = require('./routes/auth')(passport);
-app.use('/auth', authRouter);
+const authRouter = require('./routes/login')(passport);
+app.use('/login', authRouter);
 
 // callback route, after authorized
 const callbackRouter = require('./routes/callback')(passport);
-app.use('/callback', callbackRouter);
+app.use('/callback', authHelpers.callbackMiddleware, callbackRouter);
+
+// logout route
+const unauthRouter = require('./routes/logout');
+app.use('/logout', unauthRouter);
 
 // root route
 const homeRouter = require('./routes/home');
@@ -47,7 +51,7 @@ app.use('/', homeRouter);
 
 // api access routes
 const apiRouter = require('./routes/api');
-app.use('/api', authHelpers.isLoggedIn, apiRouter);
+app.use('/api', authHelpers.authMiddleware, apiRouter);
 
 // health route
 const healthRouter = require('./routes/health');

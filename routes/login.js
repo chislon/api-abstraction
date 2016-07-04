@@ -6,7 +6,8 @@ function routerWithPassport(passport) {
     passport.authenticate('google', {
       scope: ['profile'],
       accessType: 'online',
-      approvalPrompt: 'auto'
+      approvalPrompt: 'auto',
+      failureRedirect: '/'
     }));
 }
 module.exports = routerWithPassport;

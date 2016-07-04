@@ -17,7 +17,9 @@ router.get('/*', (req, res) => {
     accessAPI(req, res);
   } else {
     res.status(404)
-      .send('Invalid endpoint specified, pick from: ' + JSON.stringify(Object.keys(apiConfig.endpoints)));
+      .send('Unconfigured ' + apiConfig.name
+      + ' endpoint, pick from: '
+      + JSON.stringify(Object.keys(apiConfig.endpoints)));
   }
 });
 
